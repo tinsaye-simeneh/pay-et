@@ -18,6 +18,7 @@ import {
 import { CiCirclePlus } from "react-icons/ci";
 import { IoIosSend } from "react-icons/io";
 import { MdCallReceived } from "react-icons/md";
+import { PiHandWithdrawFill } from "react-icons/pi";
 
 const Home: React.FC = () => {
   return (
@@ -49,7 +50,7 @@ const Home: React.FC = () => {
             size="xs"
             className="flex flex-col items-center justify-center p-3 text-xs text-gray-700 bg-white border border-gray-100 rounded shadow-lg"
           >
-            <CiCirclePlus size={25} />
+            <CiCirclePlus size={20} />
             <p className="mt-2">DEPOSIT</p>
           </button>
 
@@ -58,7 +59,7 @@ const Home: React.FC = () => {
             size="xs"
             className="flex flex-col items-center justify-center p-3 text-xs text-gray-700 bg-white border border-gray-100 rounded shadow-lg"
           >
-            <FaBus />
+            <PiHandWithdrawFill size={20} />
             <p className="mt-2"> WITHDRAW</p>
           </button>
           <button
