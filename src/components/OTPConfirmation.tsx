@@ -12,15 +12,15 @@ const OTPConfirmation: React.FC = () => {
     if (otp.length === 6) {
       console.log("OTP Submitted:", otp);
       setOtp("");
-      window.location.href = "/";
+      window.location.href = "/home";
     } else {
       console.log("OTP is invalid");
     }
   };
 
   return (
-    <Container className="mt-3 bg-white min-h-screen flex items-center justify-center px-10">
-      <div className="max-w-sm w-full bg-white p-6 rounded-lg shadow-md">
+    <Container className="flex items-center justify-center min-h-screen px-10 mt-3 bg-white">
+      <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
         <img
           src="/logo.png"
           alt="Logo"
@@ -28,14 +28,14 @@ const OTPConfirmation: React.FC = () => {
           height={150}
           className="mx-auto mb-6"
         />
-        <p className="text-left text-xl text-gray-700 mb-4 font-bold">
+        <p className="mb-4 text-xl font-bold text-left text-gray-700">
           Check your phone
         </p>
-        <p className="text-left text-xs mb-7 text-gray-500">
+        <p className="text-xs text-left text-gray-500 mb-7">
           A verification code has been sent to your phone.
         </p>
 
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <PinInput
             value={otp}
             onChange={handleInputChange}
@@ -46,16 +46,16 @@ const OTPConfirmation: React.FC = () => {
           />
         </div>
 
-        <p className="text-black text-right text-xs mb-5">
+        <p className="mb-5 text-xs text-right text-black">
           Didn't get the code?
-          <a href="/" className="text-green-500 ml-1">
+          <a href={"/resend-otp"} className="ml-1 text-green-500">
             Resend OTP
           </a>
         </p>
         <button
           onClick={() => handleSubmit()}
           fullWidth
-          className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full"
+          className="w-full px-4 py-2 text-sm text-white bg-green-500 rounded-md hover:bg-green-500"
         >
           Verify
         </button>

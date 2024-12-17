@@ -8,7 +8,7 @@ const QrScan: React.FC = () => {
       <div className="flex items-center justify-between mx-auto my-5 mt-4 space-x-4 text-center">
         <button
           className="flex items-center p-2 text-white border-none rounded"
-          onClick={() => window.location.replace("/")}
+          onClick={() => window.location.replace("/home")}
         >
           <IoMdArrowBack color="black" />
         </button>

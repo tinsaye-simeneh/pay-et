@@ -15,13 +15,13 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    window.location.replace("/");
+    window.location.replace("/home");
     console.log({ phone, password });
   };
 
   return (
-    <Container className="mt-3 px-4 bg-white min-h-screen flex items-center justify-center ">
-      <div className="max-w-sm w-full bg-white p-6 rounded-lg shadow-md">
+    <Container className="flex items-center justify-center min-h-screen px-4 mt-3 bg-white ">
+      <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
         <img
           src="/logo.png"
           alt="Logo"
@@ -29,10 +29,10 @@ const Login: React.FC = () => {
           height={150}
           className="mx-auto mb-6"
         />
-        <p className="text-left text-xl text-gray-700 mb-4 font-bold">
+        <p className="mb-4 text-xl font-bold text-left text-gray-700">
           Login to your account
         </p>
-        <p className="text-left text-xs mb-7 text-gray-500">
+        <p className="text-xs text-left text-gray-500 mb-7">
           Good to see you again, enter your details below and start financing.
         </p>
 
@@ -51,24 +51,24 @@ const Login: React.FC = () => {
             onChange={(event) => setPassword(event.currentTarget.value)}
             classNames={{ label: "text-sm", input: "text-sm" }}
           />
-          <p className="text-black text-right text-xs">
+          <p className="text-xs text-right text-black">
             Forgot Password?
-            <a href="forgot" className="text-green-500 ml-1">
+            <a href="forgot" className="ml-1 text-green-500">
               Click here
             </a>
           </p>
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <button
               onClick={handleLogin}
               fullWidth
-              className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full disabled:bg-gray-300"
+              className="w-full px-4 py-2 text-sm text-white bg-green-500 rounded-md hover:bg-green-500 disabled:bg-gray-300"
               disabled={phone.length === 0 || password.length === 0}
             >
               Login
             </button>
           </div>
           <a href="/signup">
-            <button className="bg-white hover:text-white hover:bg-green-500 text-green-500 text-sm px-4 py-2 rounded-md w-full border border-green-500">
+            <button className="w-full px-4 py-2 text-sm text-green-500 bg-white border border-green-500 rounded-md hover:text-white hover:bg-green-500">
               Create Account
             </button>
           </a>

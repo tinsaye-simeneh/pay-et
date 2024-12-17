@@ -8,6 +8,7 @@ import StepOne from "./components/pin/StepOne.tsx";
 import StepTwo from "./components/pin/StepTwo.tsx";
 import "@mantine/core/styles.css";
 import Home from "./pages/Home.tsx";
+import Stepper from "./components/Stepper.tsx";
 import QrScan from "./pages/QrScan.tsx";
 
 const App: React.FC = () => {
@@ -19,7 +20,8 @@ const App: React.FC = () => {
     >
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Stepper />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/otp-confirmation" element={<OTPConfirmation />} />
