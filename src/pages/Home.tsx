@@ -1,25 +1,14 @@
 import React from "react";
+import { Card, Group, Text, Container, SimpleGrid } from "@mantine/core";
 import {
-  Card,
-  Group,
-  Text,
-  Button,
-  Container,
-  SimpleGrid,
-} from "@mantine/core";
-import {
-  FaPlane,
-  FaBus,
   FaHome,
-  FaPhone,
   FaQrcode,
-  FaBell,
   FaBars,
   FaMapMarkerAlt,
   FaUserCircle,
 } from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
-import { IoIosSend } from "react-icons/io";
+import { IoIosSend, IoIosNotificationsOutline } from "react-icons/io";
 import { MdCallReceived } from "react-icons/md";
 import { PiHandWithdrawFill } from "react-icons/pi";
 
@@ -27,11 +16,14 @@ const Home: React.FC = () => {
   return (
     <Container className="max-w-xs p-5 mx-auto mt-4">
       <div className="flex items-center justify-between mx-auto my-5 mt-4 space-x-4 text-center">
-        <button className="flex items-center p-2 text-white border-none rounded">
+        <button
+          className="flex items-center p-2 text-white border-none rounded"
+          onClick={() => window.open("/qr-scan")}
+        >
           <FaQrcode color="black" />
         </button>
         <button className="flex items-center p-2 text-white border-none rounded">
-          <FaBell color="black" />
+          <IoIosNotificationsOutline color="black" />
         </button>
       </div>
 
@@ -66,6 +58,7 @@ const Home: React.FC = () => {
             <p className="mt-2"> WITHDRAW</p>
           </button>
           <button
+            onClick={() => window.open("/qr-scan")}
             variant="outline"
             size="xs"
             className="flex flex-col items-center justify-center p-3 text-xs text-gray-700 bg-white border border-gray-100 rounded shadow-lg"

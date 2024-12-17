@@ -8,6 +8,7 @@ import StepOne from "./components/pin/StepOne.tsx";
 import StepTwo from "./components/pin/StepTwo.tsx";
 import "@mantine/core/styles.css";
 import Home from "./pages/Home.tsx";
+import QrScan from "./pages/QrScan.tsx";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/otp-confirmation" element={<OTPConfirmation />} />
           <Route path="/pin/step-one" element={<StepOne />} />
           <Route path="/pin/step-two" element={<StepTwo />} />
+          <Route path="/qr-scan" element={<QrScan />} />
         </Routes>
       </Router>
     </MantineProvider>
