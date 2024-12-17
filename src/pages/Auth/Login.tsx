@@ -19,21 +19,22 @@ const Login: React.FC = () => {
   };
 
   return (
-    <Container className="mt-10 px-4 bg-white min-h-screen flex items-center justify-center">
+    <Container className="mt-3 px-4 bg-white min-h-screen flex items-center justify-center ">
       <div className="max-w-sm w-full bg-white p-6 rounded-lg shadow-md">
-        <Image
+        <img
           src="/logo.png"
           alt="Logo"
           width={150}
           height={150}
           className="mx-auto mb-6"
         />
-        <Title className="text-center text-xs mb-4">
-          Good to see you again, enter your details below and start financing.
-        </Title>
-        <Title className="text-center text-xl mb-4">
+        <p className="text-left text-xl text-gray-700 mb-4 font-bold">
           Login to your account
-        </Title>
+        </p>
+        <p className="text-left text-xs mb-7 text-gray-500">
+          Good to see you again, enter your details below and start financing.
+        </p>
+
         <Stack gap="lg">
           <TextInput
             label="Phone Number"
@@ -49,29 +50,26 @@ const Login: React.FC = () => {
             onChange={(event) => setPassword(event.currentTarget.value)}
             classNames={{ label: "text-sm", input: "text-sm" }}
           />
-          <Text className="text-blue-500 text-right text-xs">
+          <p className="text-black text-right text-xs">
             Forgot Password?
-            <a href="forgot" className="text-blue-500">
+            <a href="forgot" className="text-green-500 ml-1">
               Click here
             </a>
-          </Text>
+          </p>
           <div className="flex justify-between items-center">
-            <Button
+            <button
               onClick={handleLogin}
               fullWidth
-              className="bg-green-500 hover:bg-green-500"
+              className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full"
             >
               Login
-            </Button>
+            </button>
           </div>
-          <Button
-            variant="outline"
-            fullWidth
-            onClick={() => {}}
-            className="text-sm text-green-500 mt-1"
-          >
-            Create Account
-          </Button>
+          <a href="/signup">
+            <button className="bg-white hover:text-white hover:bg-green-500 text-green-500 text-sm px-4 py-2 rounded-md w-full border border-green-500">
+              Create Account
+            </button>
+          </a>
         </Stack>
       </div>
     </Container>
