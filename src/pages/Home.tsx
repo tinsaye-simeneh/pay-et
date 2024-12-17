@@ -14,6 +14,9 @@ import {
   FaPhone,
   FaQrcode,
   FaBell,
+  FaBars,
+  FaMapMarkerAlt,
+  FaUserCircle,
 } from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
 import { IoIosSend } from "react-icons/io";
@@ -32,7 +35,7 @@ const Home: React.FC = () => {
         </button>
       </div>
 
-      <Card padding="lg" className="mb-6">
+      <Card padding="lg" className="mb-4">
         <Card.Section>
           <div className="p-4 text-left bg-green-500 rounded-md pt-14">
             <p className="text-white"> Balance</p>
@@ -81,55 +84,80 @@ const Home: React.FC = () => {
         </Group>
       </Card>
 
-      <Card shadow="sm" padding="lg">
-        <Text weight={500} className="mb-4 text-center text-gray-700">
-          PAY WITH PAYET
+      <Card shadow="sm" padding="lg" className="mb-20">
+        <Text weight={500} className="mb-4 text-left text-gray-700">
+          PAY WITH
+          <span className="ml-1 text-green-500">PAYET</span>
         </Text>
+        <p className="mt-2 mb-4 text-sm text-gray-500">Transportation</p>
         <SimpleGrid cols={2} spacing="md">
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center mb-2 text-green-600 bg-green-100"
-          >
-            <FaPlane /> Ethiopian Airlines
-          </Button>
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center mb-2 text-green-600 bg-green-100"
-          >
-            <FaBus /> Yegna Bus Ticket
-          </Button>
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center mb-2 text-green-600 bg-green-100"
-          >
-            <FaHome /> ELPA
-          </Button>
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center mb-2 text-green-600 bg-green-100"
-          >
-            <FaPhone /> Wuha Limat
-          </Button>
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center mb-2 text-green-600 bg-green-100"
-          >
-            <FaPhone /> EthioTelecom Com
-          </Button>
-          <Button
-            variant="light"
-            fullWidth
-            className="flex items-center text-green-600 bg-green-100"
-          >
-            <FaPhone /> Safaricom Commu
-          </Button>
+          <button fullWidth className="flex items-center mb-2 ">
+            <img
+              src="/air.png"
+              alt="Ethiopia Electricity"
+              className="w-6 h-6 mr-2"
+            />{" "}
+            Ethiopian Airlines
+          </button>
+          <button fullWidth className="flex items-center mb-2">
+            <img
+              src="/yegna.png"
+              alt="Ethiopia Electricity"
+              className="w-6 h-6 mr-2"
+            />{" "}
+            Yegna Bus Ticket
+          </button>
+        </SimpleGrid>
+        <div className="w-full">
+          <p className="mt-6 mb-4 text-sm text-gray-500">Utility</p>
+        </div>
+        <SimpleGrid cols={2} spacing="md">
+          <button fullWidth className="flex items-center mb-2">
+            <img
+              src="/elpa.jpg"
+              alt="Ethiopia Electricity"
+              className="w-6 h-6 mr-2"
+            />{" "}
+            ELPA
+          </button>
+          <button fullWidth className="flex items-center mb-2">
+            <img src="/wuha.png" alt="Ethiopia wuha" className="w-6 h-6 mr-2" />{" "}
+            Wuha Limat
+          </button>
+          <button fullWidth className="flex items-center mb-2 ">
+            {" "}
+            <img
+              src="/tele.jpg"
+              alt="Ethiopia tele"
+              className="w-6 h-6 mr-2"
+            />{" "}
+            EthioTelecom
+          </button>
+          <button fullWidth className="flex items-center ">
+            <img
+              src="/safari.png"
+              alt="Ethiopia safari"
+              className="w-6 h-6 mr-2"
+            />{" "}
+            Safaricom
+          </button>
         </SimpleGrid>
       </Card>
+      <div className="fixed bottom-0 left-0 right-0 flex items-center justify-around py-4 bg-white border-t border-gray-200">
+        <button className="flex items-center space-x-2 text-green-500 bg-green-100 rounded-lg shadow-lg">
+          <FaHome />
+          <span>HOME</span>
+        </button>
+        <button className="flex items-center space-x-2 text-gray-500">
+          <FaBars />
+        </button>
+        <button className="flex items-center space-x-2 text-gray-500">
+          <FaMapMarkerAlt />
+        </button>
+        <button className="flex items-center space-x-2 text-gray-500">
+          <FaUserCircle />
+        </button>
+      </div>
     </Container>
   );
 };
