@@ -1,20 +1,15 @@
 import React from "react";
-import { Card, Group, Text, Container, SimpleGrid } from "@mantine/core";
-import { FaHome, FaBars, FaMapMarkerAlt, FaUserCircle } from "react-icons/fa";
-import { CiCirclePlus } from "react-icons/ci";
-import {
-  IoIosSend,
-  IoMdArrowBack,
-  IoIosNotificationsOutline,
-} from "react-icons/io";
-import { MdCallReceived } from "react-icons/md";
-import { PiHandWithdrawFill } from "react-icons/pi";
+import { Card, Container } from "@mantine/core";
+import { IoMdArrowBack, IoIosNotificationsOutline } from "react-icons/io";
 
 const QrScan: React.FC = () => {
   return (
     <Container className="max-w-xs p-5 mx-auto mt-4">
       <div className="flex items-center justify-between mx-auto my-5 mt-4 space-x-4 text-center">
-        <button className="flex items-center p-2 text-white border-none rounded">
+        <button
+          className="flex items-center p-2 text-white border-none rounded"
+          onClick={() => window.open("/")}
+        >
           <IoMdArrowBack color="black" />
         </button>
         <button className="flex items-center p-2 text-white border-none rounded">
