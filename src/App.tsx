@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Auth/Login.tsx";
 import Signup from "./pages/Auth/Signup.tsx";
 import OTPConfirmation from "./components/OTPConfirmation.tsx";
-import Pin from "./components/Pin.tsx";
+import StepOne from "./components/pin/StepOne.tsx";
+import StepTwo from "./components/pin/StepTwo.tsx";
 import "@mantine/core/styles.css";
 
 const App: React.FC = () => {
@@ -20,7 +21,8 @@ const App: React.FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/otp-confirmation" element={<OTPConfirmation />} />
-          <Route path="/pin" element={<Pin />} />
+          <Route path="/pin/step-one" element={<StepOne />} />
+          <Route path="/pin/step-two" element={<StepTwo />} />
         </Routes>
       </Router>
     </MantineProvider>

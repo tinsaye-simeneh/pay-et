@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, PinInput } from "@mantine/core";
 
-const Pin: React.FC = () => {
+const StepOne: React.FC = () => {
   const [pin, setPin] = useState<string>("");
 
   const handleInputChange = (value: string) => {
@@ -12,7 +12,7 @@ const Pin: React.FC = () => {
     if (pin.length === 6) {
       console.log("Pin Submitted:", pin);
       setPin("");
-      window.location.href = "/";
+      window.location.href = "/pin/step-two";
     } else {
       console.log("Pin is invalid");
     }
@@ -49,7 +49,8 @@ const Pin: React.FC = () => {
         <button
           onClick={() => handleSubmit()}
           fullWidth
-          className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full"
+          className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full disabled:bg-gray-300"
+          disabled={pin.length !== 6}
         >
           Continue
         </button>
@@ -58,4 +59,4 @@ const Pin: React.FC = () => {
   );
 };
 
-export default Pin;
+export default StepOne;
