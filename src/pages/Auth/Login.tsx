@@ -15,7 +15,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    window.open("/");
+    window.location.replace("/");
     console.log({ phone, password });
   };
 

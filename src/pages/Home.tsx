@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <div className="flex items-center justify-between mx-auto my-5 mt-4 space-x-4 text-center">
         <button
           className="flex items-center p-2 text-white border-none rounded"
-          onClick={() => window.open("/qr-scan")}
+          onClick={() => window.location.replace("/qr-scan")}
         >
           <FaQrcode color="black" />
         </button>
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             <p className="mt-2"> WITHDRAW</p>
           </button>
           <button
-            onClick={() => window.open("/qr-scan")}
+            onClick={() => window.location.replace("/qr-scan")}
             variant="outline"
             size="xs"
             className="flex flex-col items-center justify-center p-3 text-xs text-gray-700 bg-white border border-gray-100 rounded shadow-lg"

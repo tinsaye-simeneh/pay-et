@@ -13,7 +13,7 @@ const Signup: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handlSignup = () => {
-    window.open("/login");
+    window.location.replace("/login");
     console.log({ phone, password });
   };
 
