@@ -7,6 +7,7 @@ import OTPConfirmation from "./components/OTPConfirmation.tsx";
 import StepOne from "./components/pin/StepOne.tsx";
 import StepTwo from "./components/pin/StepTwo.tsx";
 import "@mantine/core/styles.css";
+import Home from "./pages/Home.tsx";
 
 const App: React.FC = () => {
   return (
