@@ -49,7 +49,8 @@ const StepTwo: React.FC = () => {
         <button
           onClick={() => handleSubmit()}
           fullWidth
-          className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full"
+          className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full disabled:bg-gray-300"
+          disabled={pin.length !== 6}
         >
           Verify
         </button>

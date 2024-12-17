@@ -15,6 +15,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
+    window.open("/");
     console.log({ phone, password });
   };
 
@@ -60,7 +61,8 @@ const Login: React.FC = () => {
             <button
               onClick={handleLogin}
               fullWidth
-              className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full"
+              className="bg-green-500 hover:bg-green-500 text-white text-sm px-4 py-2 rounded-md w-full disabled:bg-gray-300"
+              disabled={phone.length === 0 || password.length === 0}
             >
               Login
             </button>

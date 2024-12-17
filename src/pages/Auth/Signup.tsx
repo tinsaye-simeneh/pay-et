@@ -13,12 +13,13 @@ const Signup: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handlSignup = () => {
+    window.open("/login");
     console.log({ phone, password });
   };
 
   return (
-    <Container className="mt-3 px-4 bg-white min-h-screen flex items-center justify-center ">
-      <div className="max-w-sm w-full bg-white p-6 rounded-lg shadow-md">
+    <Container className="flex items-center justify-center min-h-screen px-4 mt-3 bg-white ">
+      <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
         <img
           src="/logo.png"
           alt="Logo"
@@ -26,10 +27,10 @@ const Signup: React.FC = () => {
           height={150}
           className="mx-auto mb-6"
         />
-        <p className="text-left text-xl text-gray-700 mb-4 font-bold">
+        <p className="mb-4 text-xl font-bold text-left text-gray-700">
           Create an account
         </p>
-        <p className="text-left text-xs mb-7 text-gray-500">
+        <p className="text-xs text-left text-gray-500 mb-7">
           Welcome friend, enter your details so lets get started in financing.
         </p>
 
@@ -55,13 +56,21 @@ const Signup: React.FC = () => {
             onChange={(event) => setConfirmPassword(event.currentTarget.value)}
             classNames={{ label: "text-sm", input: "text-sm" }}
           />
-          <p className="text-black text-right text-xs">
+          <p className="text-xs text-right text-black">
             Already has an account?
-            <a href="/login" className="text-green-500 ml-1">
+            <a href="/login" className="ml-1 text-green-500">
               Login Instead
             </a>
           </p>
-          <button className="bg-white hover:text-white hover:bg-green-500 text-green-500 text-sm px-4 py-2 rounded-md w-full border border-green-500">
+          <button
+            onClick={handlSignup}
+            className="w-full px-4 py-2 text-sm text-green-500 bg-white border border-green-500 rounded-md hover:text-white hover:bg-green-500 disabled:bg-gray-300 disabled:border-none disabled:text-black"
+            disabled={
+              phone.length === 0 ||
+              password.length === 0 ||
+              confirmPassword.length === 0
+            }
+          >
             Create Account
           </button>
         </Stack>
