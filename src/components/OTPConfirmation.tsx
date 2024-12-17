@@ -41,13 +41,14 @@ const OTPConfirmation: React.FC = () => {
             onChange={handleInputChange}
             length={6}
             oneTimeCode
-            className="mb-5 text-center mx-auto"
+            className="mb-5 text-center"
+            gap={24}
           />
         </div>
 
         <p className="text-black text-right text-xs mb-5">
           Didn't get the code?
-          <a href="#" className="text-green-500 ml-1">
+          <a href="/" className="text-green-500 ml-1">
             Resend OTP
           </a>
         </p>
